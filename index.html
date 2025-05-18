@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AquaClean Sargassum Removal</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background: #e6f7ff;
+      color: #034f84;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background: #0177bf;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      animation: fadeInDown 1s ease-in;
+    }
+    header h1 {
+      font-weight: 700;
+      font-size: 2rem;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav a:hover {
+      color: #cce7ff;
+    }
+    main {
+      flex: 1;
+      padding: 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 3rem;
+      animation: fadeInUp 1s ease-in;
+    }
+    h2 {
+      color: #014a6e;
+      margin-bottom: 1rem;
+      border-bottom: 3px solid #0177bf;
+      padding-bottom: 0.3rem;
+    }
+    ul {
+      margin-left: 1.2rem;
+      color: #023e58;
+    }
+    .contact-form, .booking {
+      max-width: 600px;
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .contact-form label,
+    .booking label {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-weight: 600;
+    }
+    .contact-form input,
+    .contact-form textarea,
+    .booking input {
+      width: 100%;
+      padding: 0.6rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-family: inherit;
+    }
+    .contact-form button,
+    .booking button {
+      background: #0177bf;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .contact-form button:hover,
+    .booking button:hover {
+      background: #025a8e;
+    }
+    footer {
+      background: #014a6e;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+    .testimonials {
+      background: #ffffff;
+      padding: 1rem;
+      border-left: 5px solid #0177bf;
+      margin-bottom: 1rem;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    .photo-gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      animation: fadeInUp 1s ease-in;
+    }
+    .photo-pair {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .photo-pair img {
+      width: 45%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .photo-pair img:hover {
+      transform: scale(1.03);
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AquaClean Sargassum Removal</h1>
+    <nav>
+      <a href="#business">Business</a>
+      <a href="#residential">Residential</a>
+      <a href="#beaches">Beaches</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section id="business">
+      <h2>For Businesses</h2>
+      <p>Protect your commercial waterfronts, hotels, and resorts from sargassum buildup.</p>
+      <ul>
+        <li>Custom removal plans tailored to your property needs.</li>
+        <li>Eco-conscious and quick service.</li>
+      </ul>
+    </section>
+    <section id="residential">
+      <h2>For Residential Properties</h2>
+      <p>Clean, safe and efficient sargassum removal for private beaches and coastal homes.</p>
+    </section>
+    <section id="beaches">
+      <h2>For Beaches and Municipalities</h2>
+      <p>Large-scale eco-friendly cleanups for public beaches and communities.</p>
+    </section>
+    <section id="gallery">
+      <h2>Before & After</h2>
+      <div class="photo-gallery">
+        <div class="photo-pair">
+          <img src="https://i.imgur.com/01aH0F0.jpg" alt="Before Cleanup">
+          <img src="https://i.imgur.com/9xV5jFG.jpg" alt="After Cleanup">
+        </div>
+        <div class="photo-pair">
+          <img src="https://i.imgur.com/7E0YAXQ.jpg" alt="Before Cleanup">
+          <img src="https://i.imgur.com/zP97Zos.jpg" alt="After Cleanup">
+        </div>
+      </div>
+    </section>
+    <section id="testimonials">
+      <h2>Testimonials</h2>
+      <div class="testimonials">
+        <p><strong>Maria G. – Hotel Manager:</strong> "AquaClean transformed our beachfront overnight. Guests love it!"</p>
+      </div>
+      <div class="testimonials">
+        <p><strong>John T. – Homeowner:</strong> "Reliable and very professional. Our beach has never looked better!"</p>
+      </div>
+      <div class="testimonials">
+        <p><strong>Isla County Council:</strong> "Great service for our public beaches. We’ll be working with AquaClean regularly."</p>
+      </div>
+    </section>
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p><strong>Phone:</strong> 786-768-1673</p>
+      <p><strong>Email:</strong> info@aquaclean.com</p>
+      <form class="contact-form" action="mailto:info@aquaclean.com" method="post" enctype="text/plain">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="Name" required />
+        <label for="email">Email</label>
+        <input type="email" id="email" name="Email" required />
+        <label for="message">Message</label>
+        <textarea id="message" name="Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+    <section class="booking">
+      <h2>Book a Service</h2>
+      <form action="https://formspree.io/f/yourFormID" method="POST">
+        <label for="book-name">Name</label>
+        <input type="text" id="book-name" name="name" required>
+        <label for="book-date">Preferred Date</label>
+        <input type="date" id="book-date" name="date" required>
+        <label for="book-time">Preferred Time</label>
+        <input type="time" id="book-time" name="time" required>
+        <label for="book-service">Service Type</label>
+        <input type="text" id="book-service" name="service" required>
+        <button type="submit">Request Booking</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    © 2025 AquaClean Sargassum Removal | Privacy Policy | Terms of Service
+  </footer>
+</body>
+</html>
