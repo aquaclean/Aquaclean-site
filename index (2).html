@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AquaClean Sargassum Removal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0177bf;
+      --dark: #014a6e;
+      --light: #e6f7ff;
+      --accent: #cce7ff;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--light);
+      color: var(--dark);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    header {
+      position: relative;
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+      overflow: hidden;
+      animation: fadeInDown 1s ease-out;
+    }
+    header video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      opacity: 0.75;
+    }
+    header h1 {
+      font-weight: 700;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    nav, .mobile-nav {
+      animation: fadeIn 1.5s ease-out;
+    }
+    nav a, .mobile-nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover, .mobile-nav a:hover {
+      color: var(--accent);
+    }
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      background: var(--primary);
+      padding: 1rem;
+    }
+    .menu-toggle {
+      display: none;
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: rgba(0, 0, 0, 0.4);
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      z-index: 2;
+    }
+    main {
+      flex: 1;
+      padding: 3rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 4rem;
+      animation: fadeInUp 1s ease-in-out;
+    }
+    h2 {
+      font-size: 2rem;
+      color: var(--dark);
+      border-bottom: 2px solid var(--primary);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      animation: fadeInRight 1s ease-out;
+    }
+    .testimonials {
+      background: #fff;
+      padding: 1.2rem 1.5rem;
+      border-left: 5px solid var(--primary);
+      margin-bottom: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    .testimonials img {
+      float: left;
+      margin-right: 1rem;
+      border-radius: 50px;
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+    .map {
+      width: 100%;
+      height: 400px;
+      margin-top: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    .equipment-gallery img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+    .equipment-gallery div {
+      flex: 1 1 300px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 1.2rem;
+    }
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      .mobile-nav {
+        display: flex;
+      }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInRight {
+      from { opacity: 0; transform: translateX(-20px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <video autoplay muted loop>
+      <source src="https://www.videvo.net/videvo_files/converted/2017_03/preview/170206_05_BeachDrone_1080p.mp450126.webm" type="video/webm">
+    </video>
+    <h1>AquaClean Sargassum Removal</h1>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav>
+      <a href="#equipment">Equipment</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#map">Map</a>
+    </nav>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#equipment">Equipment</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#map">Map</a>
+    </div>
+  </header>
+
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c3fabbab46.mp3?filename=gentle-waves-109566.mp3" type="audio/mp3">
+  </audio>
+
+  <main>
+    <section id="equipment">
+      <h2>Equipment & Technology</h2>
+      <div class="equipment-gallery" style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center;">
+        <div>
+          <img src="https://via.placeholder.com/400x250?text=Beach+Harvester" alt="Beach Harvester" onclick="openLightbox(this)">
+          <p>Beach Harvester for shoreline cleanup</p>
+        </div>
+        <div>
+          <img src="https://via.placeholder.com/400x250?text=Floating+Boom+System" alt="Floating Boom System" onclick="openLightbox(this)">
+          <p>Floating containment boom to guide seaweed</p>
+        </div>
+        <div>
+          <img src="https://via.placeholder.com/400x250?text=Collection+Boat" alt="Collection Boat" onclick="openLightbox(this)">
+          <p>Custom vessels with conveyor systems</p>
+        </div>
+      </div>
+      <div id="lightbox" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:9999;">
+        <img id="lightbox-img" src="" style="max-width:90%; max-height:90%; border-radius:12px;">
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <h2>Testimonials</h2>
+      <div class="testimonials">
+        <img src="https://via.placeholder.com/100x100?text=Maria" alt="Maria T.">
+        <p><strong>Maria T., Miami, FL:</strong> AquaClean transformed my backyard shoreline. No more sargassum buildup—it's clean, fresh, and usable again. Highly recommended!</p>
+        <div style="clear:both;"></div>
+      </div>
+      <div class="testimonials">
+        <img src="https://via.placeholder.com/100x100?text=Jason" alt="Jason M.">
+        <p><strong>Jason M., Hollywood, FL:</strong> Their residential team was quick, professional, and respectful of our property. Will hire again during the summer season.</p>
+        <div style="clear:both;"></div>
+      </div>
+      <div class="testimonials">
+        <img src="https://via.placeholder.com/100x100?text=Laura" alt="Laura D.">
+        <p><strong>Laura D., Key Biscayne, FL:</strong> We host many guests and AquaClean keeps our beach access pristine. The difference is night and day!</p>
+        <div style="clear:both;"></div>
+      </div>
+    </section>
+
+    <section id="map">
+      <h2>Service Area Map</h2>
+      <div class="map">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0"
+          src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=Miami+Beach+FL" allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 AquaClean Sargassum Removal | Privacy Policy | Terms of Service
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('mobileNav');
+      nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+    }
+
+    function openLightbox(img) {
+      document.getElementById('lightbox-img').src = img.src;
+      document.getElementById('lightbox').style.display = 'flex';
+    }
+
+    document.getElementById('lightbox').addEventListener('click', () => {
+      document.getElementById('lightbox').style.display = 'none';
+    });
+  </script>
+</body>
+</html>
